@@ -16,5 +16,5 @@ jobs:
         run: |
           echo "Cloud PC est en cours d'exécution !"
           # Ajoutez ici les commandes spécifiques pour votre Cloud PC
-          # Par exemple : sleep 3600 (pour maintenir la machine active)
-          sleep 3600
+          # Par exemple : sleep 21600 (pour maintenir la machine active)
+          sleep 21600
