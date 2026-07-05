@@ -4,10 +4,17 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
       - name: Tailscale
-        uses: tailscale/tailscale-action@v2
+        uses: tailscale/github-action@v2
         with:
           authkey: ${{ secrets.TS_AUTHKEY }}
+
       - name: Run Cloud PC
         run: |
-          echo "Cloud PC en cours d'exécution !"
+          echo "Cloud PC est en cours d'exécution !"
+          # Ajoutez ici les commandes spécifiques pour votre Cloud PC
+          # Par exemple : sleep 3600 (pour maintenir la machine active)
+          sleep 3600
