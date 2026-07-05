@@ -1,0 +1,13 @@
+name: Cloud PC
+on: [push]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Tailscale
+        uses: tailscale/tailscale-action@v2
+        with:
+          authkey: ${{ secrets.TS_AUTHKEY }}
+      - name: Run Cloud PC
+        run: |
+          echo "Cloud PC en cours d'exécution !"
